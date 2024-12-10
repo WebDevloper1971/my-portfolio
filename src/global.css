@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .my-input {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .my-button {
+    height: 3rem;
+    padding: 0 10px;
+    width: fit-content;
+    background-color: rgb(35, 35, 35);
+    color: white;
+  }
+  .my-button:hover {
+    background-color: rgb(60, 60, 60);
+  }
+}
+
+@layer base {
+  *,
+  html,
+  body {
+    @apply scrollbar-hidden;
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+    /* font-optical-sizing: auto; */
+    /* font-weight: 500; */
+  }
+}
